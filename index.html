@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NostrY - Ferramentas Nostr</title>
+  <title>NostrY - Nostr Tools</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,77 +12,81 @@
     <div class="logo"><a href="index.html">NostrY</a></div>
     <nav>
       <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#features">Recursos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#home" data-i18n-key="nav.home">Home</a></li>
+        <li><a href="#features" data-i18n-key="nav.features">Features</a></li>
+        <li><a href="#contact" data-i18n-key="nav.contact">Contact</a></li>
       </ul>
     </nav>
     <button id="theme-toggle">🌓</button>
+    <select id="language-select">
+      <option value="en">English</option>
+      <option value="pt">Português</option>
+    </select>
   </header>
 
   <main>
     <section id="home" class="hero">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Under_construction.JPG" alt="Em construção" class="construction-img" onerror="this.src='https://via.placeholder.com/400x300?text=Em+constru%C3%A7%C3%A3o'">
-      <h1>Site em construção</h1>
-      <p>Em breve, o NostrY será lançado com ferramentas e funcionalidades para explorar a rede Nostr.</p>
-      <a href="#contact" class="btn">Contacte-nos</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Under_construction.JPG" alt="Under Construction" data-i18n-alt-key="hero.image.alt" class="construction-img" onerror="this.src='https://via.placeholder.com/400x300?text=Under+Construction'">
+      <h1 data-i18n-key="hero.title">Something Exciting Is Coming</h1>
+      <p data-i18n-key="hero.description">We're working on something special. Stay tuned to be the first to know.</p>
+      <a href="#contact" class="btn" data-i18n-key="hero.button">Learn More</a>
     </section>
 
     <section id="features" class="features">
-      <h2>Ferramentas e Recursos</h2>
+      <h2 data-i18n-key="features.title">Sneak Peek</h2>
       <div class="grid">
         <div class="card">
           <img src="https://logo.clearbit.com/iris.to?size=80" alt="Iris" class="feature-img" onerror="this.style.display='none'">
           <h3>Iris</h3>
-          <p>Cliente social descentralizado para a rede Nostr.</p>
-          <a href="https://iris.to" target="_blank" class="btn-inline">Aceder</a>
+          <p data-i18n-key="features.iris.desc">Details coming soon.</p>
+          <a href="https://iris.to" target="_blank" class="btn-inline" data-i18n-key="features.iris.link">Stay Tuned</a>
         </div>
         <div class="card">
           <img src="https://logo.clearbit.com/damus.io?size=80" alt="Damus" class="feature-img" onerror="this.style.display='none'">
           <h3>Damus</h3>
-          <p>Aplicação iOS para uso direto da rede Nostr.</p>
-          <a href="https://damus.io" target="_blank" class="btn-inline">Aceder</a>
+          <p data-i18n-key="features.damus.desc">Details coming soon.</p>
+          <a href="https://damus.io" target="_blank" class="btn-inline" data-i18n-key="features.damus.link">Stay Tuned</a>
         </div>
         <div class="card">
           <img src="https://framerusercontent.com/images/pGyd13LuH1IH46ttVoDxNfYzLEA.png?scale-down-to=512" alt="Coracle" class="feature-img" onerror="this.style.display='none'">
           <h3>Coracle</h3>
-          <p>Cliente de ambiente de trabalho open-source.</p>
-          <a href="https://coracle.social" target="_blank" class="btn-inline">Aceder</a>
+          <p data-i18n-key="features.coracle.desc">Details coming soon.</p>
+          <a href="https://coracle.social" target="_blank" class="btn-inline" data-i18n-key="features.coracle.link">Stay Tuned</a>
         </div>
         <div class="card">
           <img src="https://logo.clearbit.com/github.com?size=80" alt="NIPs" class="feature-img" onerror="this.style.display='none'">
           <h3>NIPs</h3>
-          <p>Documentação oficial de especificações da rede Nostr.</p>
-          <a href="https://github.com/nostr-protocol/nips" target="_blank" class="btn-inline">Ver NIPs</a>
+          <p data-i18n-key="features.nips.desc">Details coming soon.</p>
+          <a href="https://github.com/nostr-protocol/nips" target="_blank" class="btn-inline" data-i18n-key="features.nips.link">Stay Tuned</a>
         </div>
         <div class="card">
           <img src="https://cdn.simpleicons.org/snort?color=000" alt="Snort Social" class="feature-img" onerror="this.style.display='none'">
           <h3>Snort Social</h3>
-          <p>Cliente web minimalista para aceder ao Nostr.</p>
-          <a href="https://snort.social" target="_blank" class="btn-inline">Aceder</a>
+          <p data-i18n-key="features.snort.desc">Details coming soon.</p>
+          <a href="https://snort.social" target="_blank" class="btn-inline" data-i18n-key="features.snort.link">Stay Tuned</a>
         </div>
         <div class="card">
           <img src="https://logo.clearbit.com/nostrcheck.me?size=80" alt="NostrCheck" class="feature-img" onerror="this.style.display='none'">
           <h3>NostrCheck</h3>
-          <p>Valide o seu endereço NIP-05 rapidamente.</p>
-          <a href="https://nostrcheck.me" target="_blank" class="btn-inline">Verificar</a>
+          <p data-i18n-key="features.nostrcheck.desc">Details coming soon.</p>
+          <a href="https://nostrcheck.me" target="_blank" class="btn-inline" data-i18n-key="features.nostrcheck.link">Stay Tuned</a>
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Entre em Contacto</h2>
+      <h2 data-i18n-key="contact.title">Get in Touch</h2>
       <form action="mailto:contato@nostry.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="O seu nome" required>
-        <input type="email" name="email" placeholder="O seu e-mail" required>
-        <textarea name="message" rows="4" placeholder="A sua mensagem"></textarea>
-        <button type="submit" class="btn">Enviar</button>
+        <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder-key="contact.name.placeholder" required>
+        <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder-key="contact.email.placeholder" required>
+        <textarea name="message" rows="4" placeholder="Your Message" data-i18n-placeholder-key="contact.message.placeholder"></textarea>
+        <button type="submit" class="btn" data-i18n-key="contact.send">Send</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2024 NostrY. Desenvolvido com ❤️ pela comunidade Nostr.</p>
+    <p data-i18n-key="footer.text">© 2024 NostrY. Developed with ❤️ by the Nostr community.</p>
   </footer>
 
   <script>
@@ -99,6 +103,87 @@
         toggle.textContent = '🌓';
       }
     });
+
+    // Translation dictionary
+    const translations = {
+      en: {
+        'nav.home': 'Home',
+        'nav.features': 'Features',
+        'nav.contact': 'Contact',
+        'hero.title': 'Something Exciting Is Coming',
+        'hero.description': "We're working on something.",
+        'hero.button': 'Learn More',
+        'hero.image.alt': 'Under Construction',
+        'features.title': 'Sneak Peek',
+        'features.iris.desc': 'Details coming soon.',
+        'features.iris.link': 'Stay Tuned',
+        'features.damus.desc': 'Details coming soon.',
+        'features.damus.link': 'Stay Tuned',
+        'features.coracle.desc': 'Details coming soon.',
+        'features.coracle.link': 'Stay Tuned',
+        'features.nips.desc': 'Details coming soon.',
+        'features.nips.link': 'Stay Tuned',
+        'features.snort.desc': 'Details coming soon.',
+        'features.snort.link': 'Stay Tuned',
+        'features.nostrcheck.desc': 'Details coming soon.',
+        'features.nostrcheck.link': 'Stay Tuned',
+        'contact.title': 'Get in Touch',
+        'contact.name.placeholder': 'Your Name',
+        'contact.email.placeholder': 'Your Email',
+        'contact.message.placeholder': 'Your Message',
+        'contact.send': 'Send',
+        'footer.text': '© 2024 NostrY. Developed with ❤️ by the Nostr community.'
+      },
+      pt: {
+        'nav.home': 'Início',
+        'nav.features': 'Recursos',
+        'nav.contact': 'Contacto',
+        'hero.title': 'Algo emocionante está por vir',
+        'hero.description': 'Estamos a preparar algo.',
+        'hero.button': 'Saber Mais',
+        'hero.image.alt': 'Em construção',
+        'features.title': 'Prévia',
+        'features.iris.desc': 'Detalhes em breve.',
+        'features.iris.link': 'Fica atento',
+        'features.damus.desc': 'Detalhes em breve.',
+        'features.damus.link': 'Fica atento',
+        'features.coracle.desc': 'Detalhes em breve.',
+        'features.coracle.link': 'Fica atento',
+        'features.nips.desc': 'Detalhes em breve.',
+        'features.nips.link': 'Fica atento',
+        'features.snort.desc': 'Detalhes em breve.',
+        'features.snort.link': 'Fica atento',
+        'features.nostrcheck.desc': 'Detalhes em breve.',
+        'features.nostrcheck.link': 'Fica atento',
+        'contact.title': 'Entre em Contacto',
+        'contact.name.placeholder': 'O seu nome',
+        'contact.email.placeholder': 'O seu e-mail',
+        'contact.message.placeholder': 'A sua mensagem',
+        'contact.send': 'Enviar',
+        'footer.text': '© 2024 NostrY. Desenvolvido com ❤️ pela comunidade Nostr.'
+      }
+    };
+
+    function translatePage(lang) {
+      document.querySelectorAll('[data-i18n-key]').forEach(el => {
+        const key = el.getAttribute('data-i18n-key');
+        if (translations[lang][key]) el.innerText = translations[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder-key');
+        if (translations[lang][key]) el.placeholder = translations[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-alt-key]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt-key');
+        if (translations[lang][key]) el.alt = translations[lang][key];
+      });
+      document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en';
+    }
+
+    const languageSelect = document.getElementById('language-select');
+    languageSelect.value = 'en';
+    translatePage('en');
+    languageSelect.addEventListener('change', () => translatePage(languageSelect.value));
   </script>
 </body>
 </html> 
