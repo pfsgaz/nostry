@@ -1,60 +1,104 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>nostry.com</title>
-    <style>
-      html, body {
-        height: 100%;
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NostrY - Ferramentas Nostr</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">NostrY</a></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#features">Recursos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">🌓</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Under_construction.JPG" alt="Em construção" class="construction-img" onerror="this.src='https://via.placeholder.com/400x300?text=Em+constru%C3%A7%C3%A3o'">
+      <h1>Site em construção</h1>
+      <p>Em breve, o NostrY será lançado com ferramentas e funcionalidades para explorar a rede Nostr.</p>
+      <a href="#contact" class="btn">Contacte-nos</a>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Ferramentas e Recursos</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://logo.clearbit.com/iris.to?size=80" alt="Iris" class="feature-img" onerror="this.style.display='none'">
+          <h3>Iris</h3>
+          <p>Cliente social descentralizado para a rede Nostr.</p>
+          <a href="https://iris.to" target="_blank" class="btn-inline">Aceder</a>
+        </div>
+        <div class="card">
+          <img src="https://logo.clearbit.com/damus.io?size=80" alt="Damus" class="feature-img" onerror="this.style.display='none'">
+          <h3>Damus</h3>
+          <p>Aplicação iOS para uso direto da rede Nostr.</p>
+          <a href="https://damus.io" target="_blank" class="btn-inline">Aceder</a>
+        </div>
+        <div class="card">
+          <img src="https://framerusercontent.com/images/pGyd13LuH1IH46ttVoDxNfYzLEA.png?scale-down-to=512" alt="Coracle" class="feature-img" onerror="this.style.display='none'">
+          <h3>Coracle</h3>
+          <p>Cliente de ambiente de trabalho open-source.</p>
+          <a href="https://coracle.social" target="_blank" class="btn-inline">Aceder</a>
+        </div>
+        <div class="card">
+          <img src="https://logo.clearbit.com/github.com?size=80" alt="NIPs" class="feature-img" onerror="this.style.display='none'">
+          <h3>NIPs</h3>
+          <p>Documentação oficial de especificações da rede Nostr.</p>
+          <a href="https://github.com/nostr-protocol/nips" target="_blank" class="btn-inline">Ver NIPs</a>
+        </div>
+        <div class="card">
+          <img src="https://cdn.simpleicons.org/snort?color=000" alt="Snort Social" class="feature-img" onerror="this.style.display='none'">
+          <h3>Snort Social</h3>
+          <p>Cliente web minimalista para aceder ao Nostr.</p>
+          <a href="https://snort.social" target="_blank" class="btn-inline">Aceder</a>
+        </div>
+        <div class="card">
+          <img src="https://logo.clearbit.com/nostrcheck.me?size=80" alt="NostrCheck" class="feature-img" onerror="this.style.display='none'">
+          <h3>NostrCheck</h3>
+          <p>Valide o seu endereço NIP-05 rapidamente.</p>
+          <a href="https://nostrcheck.me" target="_blank" class="btn-inline">Verificar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Entre em Contacto</h2>
+      <form action="mailto:contato@nostry.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="O seu nome" required>
+        <input type="email" name="email" placeholder="O seu e-mail" required>
+        <textarea name="message" rows="4" placeholder="A sua mensagem"></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 NostrY. Desenvolvido com ❤️ pela comunidade Nostr.</p>
+  </footer>
+
+  <script>
+    // Ensure default theme is dark on page load
+    document.documentElement.classList.add('dark');
+    // Toggle Light/Dark
+    const toggle = document.getElementById('theme-toggle');
+    // Set initial toggle icon for dark mode
+    toggle.textContent = '☀️';
+    toggle.addEventListener('click', () => {
+      if (document.documentElement.classList.toggle('dark')) {
+        toggle.textContent = '☀️';
+      } else {
+        toggle.textContent = '🌓';
       }
-      body {
-        background-color: #fff;
-        background: radial-gradient(circle at center, #fff 0%, #f8f8f8 75%, #ebebeb 100%);
-        color: #222;
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-        font-size: 1rem;
-        line-height: 1.5;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      main {
-        padding: 1rem;
-        text-align: center;
-      }
-      h1 {
-        font-size: 2.5rem;
-        line-height: 1.1;
-        margin: 0;
-      }
-      @media screen and (max-width: 480px) {
-        h1 {
-          font-size: 1.5rem;
-        }
-      }
-      h1::after {
-        content: "";
-        background-color: #ffe800;
-        background: repeating-linear-gradient(45deg, #ffe800, #ffe800 0.5rem, #222 0.5rem, #222 1.0rem);
-        display: block;
-        height: 0.5rem;
-        margin-top: 1rem;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      p {
-        margin: 1rem 0 0 0;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>nostry.com</h1>
-      <p>Website is under construction, wide wild west reborn</p>
-    </main>
-  </body>
-</html>
+    });
+  </script>
+</body>
+</html> 
